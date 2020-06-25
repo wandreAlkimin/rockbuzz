@@ -11,14 +11,19 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-{{--    <script src="{{ asset('js/materialize.js') }}" async></script>--}}
+{{--    <script src="{{ asset('js/materialize.js') }}" defer></script>--}}
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
         @include('layouts.topo')
+        @include('layouts.errors')
         @yield('content')
 
 
@@ -81,5 +86,7 @@
 
         {{--</main>--}}
     {{--</div>--}}
+
+
 </body>
 </html>

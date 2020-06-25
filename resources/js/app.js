@@ -5,10 +5,15 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
+
 require('./bootstrap');
-require('./materialize')
+require('./materialize');
+
 
 window.Vue = require('vue');
+
+M.AutoInit();
 
 /**
  * The following block of code may be used to automatically register your

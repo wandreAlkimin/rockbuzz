@@ -14,14 +14,17 @@
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('posts.index');
-});
+//Route::get('/', function () {
+//    return view('site.posts.index');
+//});
+
+
+Route::get('/', 'HomeController@index')->name('/');
+Route::get('/{id}', 'HomeController@show'); // Post ID
 
 
 
-
-
+//Route::resource('/contato', 'Site\ExternalContactController')->only(['index','store']);
 
 
 //Route::get('/', 'PostsController@listar');

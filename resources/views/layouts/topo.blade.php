@@ -1,6 +1,6 @@
 <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="@if(auth()->check()){{"/posts"}} @else {{"/home"}} @endif" class="brand-logo styleLogo" style="font-size: 50px;">Rockbuzz</a>
+        <a id="logo-container" href="@if(auth()->check()){{"/adm"}} @else {{"/"}} @endif" class="brand-logo styleLogo" style="font-size: 50px;">Rockbuzz</a>
         <ul class="right hide-on-med-and-down ">
             @include('layouts.menuTopo')
         </ul>

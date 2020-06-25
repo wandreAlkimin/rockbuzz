@@ -14,19 +14,41 @@ class Post extends Model
      */
     protected $fillable = [
         'title',
-        'body'
+        'body',
+        'cover_image',
+        'active',
+        'user_id'
     ];
 
-    protected $guarded = [];
 
-    public function has_tag($tag_id)
+    /**
+     * <b>User</b> Método responsável em definir o relacionamento entre suas tabelas
+     */
+    public function user()
     {
-        $rows = \DB::table('tag_post')->where('tag_id', '=', $tag_id)->where('post_id', '=', $this->id)->get();
-
-        if (count($rows) > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return $this->belongsTo(User::class);
     }
+
+    /**
+     * <b>tags</b> Método responsável em definir o relacionamento entre suas tabelas
+     */
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'posts_tags');
+    }
+
+
+
+//    protected $guarded = [];
+//
+//    public function has_tag($tag_id)
+//    {
+//        $rows = \DB::table('tag_post')->where('tag_id', '=', $tag_id)->where('post_id', '=', $this->id)->get();
+//
+//        if (count($rows) > 0) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
 }
