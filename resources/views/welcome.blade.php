@@ -12,8 +12,6 @@
 
     <title>Rockbuzz - Teste Full Stack Laravel</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
@@ -54,17 +52,23 @@
     </div>
 </nav>
 
-<!-- Page Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <div id="app">
-                <posts></posts>
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
             </div>
         </div>
     </div>
 </div>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" defer></script>
+
 <script src="{{ asset('js/app.js') }}" defer></script>
 
 </body>

@@ -1,0 +1,170 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.hidden {
+  display: none !important;
+}
+
+#installContainer {
+  position: absolute;
+  bottom: 1em;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#installContainer button {
+  background-color: inherit;
+  border: 1px solid white;
+  color: white;
+  font-size: 1em;
+  padding: 0.75em;
+}
+
+.referenciaPaineis {
+  height: 90.0%;
+  position: absolute;
+  width: 100%;
+}
+
+.painelLateral {
+  float: left;
+  width: auto;
+  height: 99%;
+  position: absolute;
+  overflow: auto;
+
+}
+.painelCentral {
+  height:99%;
+  overflow: auto;
+  position: absolute;
+}
+
+
+
+
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 20%;
+  left:7%;
+}
+
+select[required]:focus{
+  outline: none !important;
+}
+select[required]{
+  display: block;
+  padding: 0;
+  position: absolute;
+  background: transparent;
+  color: transparent;
+  border: none;
+  top: 0;
+}
+
+.styleLogo {
+  font-family: 'Clicker Script', cursive
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #000000!important;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+/*MEDIA GRANDE*/
+@media only screen and (min-width : 993px) {
+  .painelCentral {
+    width: 85%;
+    left: 15%;
+  }
+
+
+  .painelLateralBotao {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+
+  .painelCentral {
+    width: 85%;
+    left: 15%;
+  }
+}
+
+/*MOBILE*/
+@media only screen and (max-width : 600px) {
+
+  .btn-fixed-customer-direita {
+    bottom: 16px!important;
+  }
+
+  .btn-fixed-customer-esquerda {
+    bottom: 16px!important;
+    right: 62%!important;
+  }
+
+  .toast{
+    margin-bottom: 50px;
+  }
+
+  .painelCentral {
+    width: 100%;
+    left: 0%;
+    padding: 26px 0px 0px 0px!important;
+  }
+
+  #index-banner .section {
+    top: 0;
+  }
+
+  .parallax-index-img {
+    width: 174%;
+  }
+
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
