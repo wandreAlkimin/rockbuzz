@@ -5,6 +5,20 @@
             Perfil
         </a>
     </li>
+    <li class="nav-item ">
+        <a href="/adm/tags" class="waves-effect waves-light btn-small painelLateralBotao " style=""><i class="material-icons left">tag</i>
+            Tags
+        </a>
+    </li>
+
+    <li class="nav-item ">
+        <a href="/adm/posts" class="waves-effect waves-light btn-small painelLateralBotao " style=""><i class="material-icons left">home</i>
+            Posts
+        </a>
+    </li>
+
+
+
 
 
 </div>
