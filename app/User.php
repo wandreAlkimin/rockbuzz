@@ -27,4 +27,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    /**
+     * <b>Posts</b> Método responsável em definir o relacionamento entre suas tabelas
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class)->with('tags')->orderBy('updated_at', 'desc');
+    }
 }

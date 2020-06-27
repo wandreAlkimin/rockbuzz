@@ -22,7 +22,7 @@
 
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input type="password" name="password" class="validate" autocomplete="new-password" minlength="8" value="{{ old('password') }}" required>
+                                    <input type="password" name="password" class="validate" autocomplete="new-password" minlength="6" value="{{ old('password') }}" required>
                                     <label for="Senha">Senha</label>
                                 </div>
                             </div>

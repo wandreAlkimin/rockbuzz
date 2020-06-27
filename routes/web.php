@@ -14,23 +14,13 @@
 
 Auth::routes();
 
-//Route::get('/', function () {
-//    return view('site.posts.index');
-//});
-
-
 Route::get('/', 'HomeController@index')->name('/');
 Route::get('/{id}', 'HomeController@show'); // Post ID
+Route::post('/search', 'HomeController@search')->name('search');
 
 
+Route::middleware(['auth'])->group(function () {
 
-//Route::resource('/contato', 'Site\ExternalContactController')->only(['index','store']);
-
-
-//Route::get('/', 'PostsController@listar');
-//Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('/posts/create', 'PostsController@criar');
-//Route::post('/posts/store', 'PostsController@salvar');
-//Route::get('/posts/edit/{id}', 'PostsController@editar');
-//Route::post('/posts/update/{id}', 'PostsController@atualizar');
-//Route::get('/posts/destroy/{id}', 'PostsController@deletar');
+    Route::resource('/adm/posts', 'Api\Adm\PostController');
+    Route::post('/adm/posts/search/', 'Api\Adm\PostController@search')->name('adm.search');
+});

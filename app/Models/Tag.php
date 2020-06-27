@@ -15,4 +15,12 @@ class Tag extends Model
         'name',
         'active',
     ];
+
+    /**
+     * <b>posts</b> Método responsável em definir o relacionamento entre suas tabelas
+     */
+    public function posts()
+    {
+        return $this->belongsToMany(Post::class, 'posts_tags');
+    }
 }

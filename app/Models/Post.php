@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
+
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -18,6 +21,23 @@ class Post extends Model
         'cover_image',
         'active',
         'user_id'
+    ];
+
+
+    /**
+     * <b>rules</b> Atributo responsável em definir regras de validação dos dados submetidos pelo formulário
+     */
+    public $rules = [
+        'title'   => 'required',
+        'body'    => 'required',
+    ];
+
+    /**
+     * <b>messages</b>  Atributo responsável em especificar uma mensagem de erro personalizada apenas para um campo específico
+     */
+    public $messages = [
+        'title.required' => 'É necessario um titulo',
+        'body.required' => 'É necessario um texto',
     ];
 
 
@@ -37,18 +57,4 @@ class Post extends Model
         return $this->belongsToMany(Tag::class, 'posts_tags');
     }
 
-
-
-//    protected $guarded = [];
-//
-//    public function has_tag($tag_id)
-//    {
-//        $rows = \DB::table('tag_post')->where('tag_id', '=', $tag_id)->where('post_id', '=', $this->id)->get();
-//
-//        if (count($rows) > 0) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
 }

@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('cover_image')->nullable()->comment('Imagem de capa');
             $table->boolean('active')->default(1);
             $table->timestamps();
+            $table->softDeletes();
 
             // Chave estrangeira da tabela -- User --
             $table->unsignedBigInteger('user_id');

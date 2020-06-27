@@ -10,15 +10,16 @@
   display: none !important;
 }
 
-/*Grandes telas*/
-@media only screen and (min-width: 992px){
 
-  #imagem-adm-posts {
-    width:200px;
-  }
+ @media only screen and (min-width: 992px){
+
+   #imagem-adm-posts {
+     width:200px;
+   }
 
 
-}
+ }
+
 
 #installContainer {
   position: absolute;

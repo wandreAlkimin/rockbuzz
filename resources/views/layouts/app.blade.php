@@ -11,7 +11,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-{{--    <script src="{{ asset('js/materialize.js') }}" defer></script>--}}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -20,11 +19,40 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/siteStyle.css') }}" rel="stylesheet">
 </head>
 <body>
-        @include('layouts.topo')
-        @include('layouts.errors')
+
+@include('layouts.errors')
+
+
+<div class="referenciaPaineis">
+
+    @include('layouts.topo')
+
+    @auth
+        <div class="col s12 m3 l2"  style="padding: 0px 15px 0px 0px; " > <!-- Note that "m4 l3" was added -->
+            {{--Oculto para os dispositivos moveis--}}
+            <div class="card-panel painelLateral z-depth-3 hide-on-small-only" style="margin-bottom: 0px;width: 14%" >
+                <ul class="nav-item m12 l12">
+                    @include('layouts.painelLateral')
+                </ul>
+            </div>
+        </div>
+
+        <div class="col s12 m10 l10 " >
+            <div class="card-panel painelCentral  " style="margin-bottom: 0px;" >
+                @yield('content')
+            </div>
+        </div>
+    @else
         @yield('content')
+    @endauth
+</div>
+
+
+
+        {{--@yield('content')--}}
 
 
     {{--<div id="app">--}}
