@@ -21,6 +21,7 @@ Route::post('/search', 'HomeController@search')->name('search');
 
 Route::middleware(['auth'])->group(function () {
 
+    Route::resource('/adm/profile', 'Api\Profile\ProfileController');
     Route::resource('/adm/posts', 'Api\Adm\PostController');
     Route::resource('/adm/tags', 'Api\Adm\TagController');
     Route::post('/adm/posts/search/', 'Api\Adm\PostController@search')->name('adm.search');

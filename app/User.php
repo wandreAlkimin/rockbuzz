@@ -30,6 +30,21 @@ class User extends Authenticatable
 
 
     /**
+     * <b>rules</b> Atributo responsável em definir regras de validação dos dados submetidos pelo formulário
+     */
+    public $rules = [
+        'name'   => 'required',
+    ];
+
+    /**
+     * <b>messages</b>  Atributo responsável em especificar uma mensagem de erro personalizada apenas para um campo específico
+     */
+    public $messages = [
+        'name.required' => 'É necessario um nome',
+    ];
+
+
+    /**
      * <b>Posts</b> Método responsável em definir o relacionamento entre suas tabelas
      */
     public function posts()
